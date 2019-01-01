@@ -3,24 +3,23 @@ import numpy as np
 
 ### GENERATE 64x64 possible movements grid (1 - possible, 0 - impossible )
 
-def grid():
+def grid(edge):
     full_grid = []
-
-    for n in range(0,64):
-        grid = [0] * 64
+    for n in range(0,edge**2):
+        grid = [0] * edge**2
         for i,j in enumerate(grid):     
-            if n % 8 == 0:
-                if i == n+1 or i == n+8 or i == n-8:
+            if n % edge == 0:
+                if i == n+1 or i == n+edge or i == n-edge:
                     grid[i] = 1
-            elif (n + 1) % 8 == 0:
-                if i == n+8 or i == n-1 or i == n-8:
+            elif (n + 1) % edge == 0:
+                if i == n+edge or i == n-1 or i == n-edge:
                     grid[i] = 1 
             else:
-                if i == n+1 or i == n+8 or i == n-1 or i == n-8:
+                if i == n+1 or i == n+edge or i == n-1 or i == n-edge:
                     grid[i] = 1
         full_grid.append(grid)  
-    
-    return full_grid    
+        
+    return full_grid          
     
     
 def route(starting_location, ending_location, desert_storm_1, 

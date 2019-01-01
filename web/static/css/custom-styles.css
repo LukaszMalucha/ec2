@@ -8,13 +8,15 @@ body {
     margin: 0;
     padding-bottom: 0;
     min-height: 100%;
-    background-image: url('../../static/img/backg.jpg');
+    background-image: url('../../static/img/backg.png');
     background-size: cover;
+
 }
 
 html {
     height: 100%;
     box-sizing: border-box;
+
 }
 
 
@@ -115,6 +117,7 @@ h6 {
     z-index: 300;
     background: #621e12;
     border: none;
+    border-bottom: 1px outset #C4554C;
     padding-right: 10px;
     box-shadow: none;
 }
@@ -264,6 +267,8 @@ nav i.material-icons {
     padding: 20px;
     box-shadow: none;
     background-color: transparent;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -303,6 +308,7 @@ h2 {
     padding: 15px;
     border-radius: 10px;
     margin-left: 20px;
+    border: 1px outset #C4554C;
 }
 
 #dashboard_card h2 {
@@ -316,7 +322,7 @@ h2 {
     font-size: 14px;
 }
 
-#dashboard_card > .row {
+#dashboard_card>.row {
     margin: 10px;
 }
 
@@ -351,19 +357,6 @@ h2 {
 }
 
 
-#plot {
-    background-color: white;
-    border-style: solid;
-    border-color: #848484;
-    border-radius: 5px;
-    vertical-align: middle;
-    padding: 20px;
-    margin: 0px;
-    height: 506px;
-    width: 506px;
-    padding: 0px;
-}
-
 
 .btn-large {
     background-color: #2d4b65;
@@ -378,20 +371,21 @@ h2 {
 #tile-column {
 
     padding: 0px;
-    width: 82px;
+    width: 62px;
 }
 
 #mars-tile {
     margin: 1px;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 }
 
 #map-card {
-    width: 680px;
-    height: 680px;
+    width: 520px;
+    height: 520px;
     padding: 10px;
     background-color: #621e12;
+    border: 1px outset #C4554C;
 }
 
 #grid-card {
@@ -400,6 +394,7 @@ h2 {
     padding: 0px;
     background-image: url('../../static/img/grid2.png');
     background-size: cover;
+    border: 1px outset #C4554C;
 }
 
 
@@ -426,6 +421,7 @@ h5 {
     padding: 10px;
     height: 160px;
     background-color: #621e12;
+    border: 1px outset #C4554C;
 }
 
 #command-card h2 {
@@ -440,7 +436,7 @@ h5 {
     height: 40px;
 }
 
-#button_command > i {
+#button_command>i {
     font-size: 3.3rem;
 }
 
@@ -500,22 +496,6 @@ input[type="number"] {
     text-align: center;
 }
 
-[type="radio"]:checked+span::after,
-[type="radio"].with-gap:checked+span::after {
-    background-color: #29abe2 !important;
-}
-
-[type="radio"]:checked+span::after,
-[type="radio"].with-gap:checked+span::before,
-[type="radio"].with-gap:checked+span::after {
-    border: 2px solid #29abe2;
-}
-
-
-.table-bordered>tbody>tr>td {
-    border-left: 1px solid #ddd;
-    border-right-color: transparent;
-}
 
 /*------------------------------------------------------------------------------
     MEDIA QUERIES     
@@ -523,9 +503,7 @@ input[type="number"] {
 
 /* MIN WIDTHS ----------------------------------------------------------------*/
 
-@media(min-width:1811px) {
-
-}
+@media(min-width:1811px) {}
 
 @media(min-width:768px) {
     #page-wrapper {
