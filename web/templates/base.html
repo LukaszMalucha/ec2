@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pathfinder AI</title>
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Bootstrap-->
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- Custom Styles-->
+    <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Nouislider-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
+
+</head>
+
+
+
+<body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+
+        <!-- TOP NAVBAR -->
+        <nav class="navbar navbar-default top-navbar">
+            <div class="col-md-5 text-center"></div>
+            <div class="col-md-2 text-center">
+                <div class="row">
+                    <a class="navbar-brand waves-effect waves-dark" href="{{url_for('dashboard')}}">
+                        <div class="col-md-2 text-center">
+                            <i class="material-icons">blur_on</i>
+                        </div>
+                        <div class="col-md-9 text-left" id="title-strong">
+                            <strong> Pathfinder AI</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5 text-center"></div>
+        </nav>
+
+        <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+        <div id="page-wrapper">
+            <div id="page-index">
+                <div class="dashboard-cards">
+                    <div class="card" id="main_card">
+                        <br>
+                        <div class="row text-center">
+                            <div class="col-md-2 text-left"> </div>
+                            <div class="col-md-8 text-left">
+                                <div class="card" id="dashboard_card">
+                                    <div class="row text-center">
+                                        <h2>Mars Mission</h2>
+                                    </div>
+                                    <div class="row text-center">
+                                        <h5>Mars Rover has finished assigned task and now is just returning to the Base. On the way back it has to also collect the astronauts and avoid Mars desert storms.</h5>
+                                        <h5> Space Buggy is being navigated by simple & efficient Q-Learning Artificial Intelligence algorithm. Planet Mars is being represented by 8x8 grid.
+                                        </h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-left"> </div>
+                        </div>
+                        <br> {% block content %} {% endblock %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Materialize Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!-- Materialize Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Bootstrap Js -->
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+
+
+
+</body>
+
+</html>
