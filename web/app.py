@@ -3,7 +3,7 @@ import os
 import env
 
 from flask_bootstrap import Bootstrap
-from flask import Flask, Response, render_template, request, redirect, url_for, session
+from flask import Flask, Response, render_template, current_app, request, redirect, url_for, flash, jsonify, session
 from flask_restful import Api, Resource
 
 import numpy as np
@@ -19,8 +19,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY") 
 Bootstrap(app)
 api = Api(app)
-
-
 
 
 
@@ -79,7 +77,7 @@ class Pathfinder(Resource):
         env_dict = session.get('env_dict')
         desert_storms = session.get('desert_storms')
         
-        reward_grid = grid(8)
+        reward_grid = grid()
         
         starting_location = env_dict['start_location']
         ending_location   = env_dict['base_location']
@@ -113,7 +111,7 @@ api.add_resource(Pathfinder, '/pathfinder')
 @app.route('/dashboard')
 def dashboard():
     
-    session.clear()
+
     return render_template("dashboard.html")
     
  
@@ -134,6 +132,4 @@ def error500(error):
 
 
 if __name__ == '__main__':
-    # Bind to PORT if defined, otherwise default to 5000.
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)     
+        app.run(debug=True,host='0.0.0.0',port=5000)
